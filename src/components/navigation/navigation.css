@@ -21,11 +21,13 @@
   }
 
   .menu-wrap > .list-item:hover {
-    background-color: #ffea00;
+    /*background-color: #ffea00;*/
+    background-color: #ff4713; /* CUSTOM for Blackrock */
   }
 
   .menu-wrap > .list-item:active {
-    background-color: #ffea00;
+    /*background-color: #ffea00;*/
+    background-color: #ff4713;  /* CUSTOM for Blackrock */
   }
 
   @media (max-width: 1024px) {
@@ -35,5 +37,21 @@
       flex-direction: column;
     }
 
+  }
+  /* CUSTOM FOR BLACKROCK */
+  .main-container .menu-wrap a.list-item {
+    margin: 2px 8px 0 8px;
+    color: #000;
+    font: 16px/24px FortBold,Arial,sans-serif;
+    letter-spacing: 0;
+    padding: 6px 8px;
+    display: flex;
+    white-space: nowrap;
+    margin-bottom: 6px;
+  }
+  .menu-wrap > .list-item:hover {
+    height: 1px;
+    background: #ff4713;
+    margin-bottom: -4px;
   }
     
