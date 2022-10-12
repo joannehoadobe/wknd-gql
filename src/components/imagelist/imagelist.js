@@ -12,7 +12,8 @@ const ImageList = ({ content }) => {
       content.imageListPromoAssets[i].block[0] = content.imageListPromoAssets[i].block[0].adventureDetailReference
     }
     console.log(content.imageListPromoAssets);
-  }*/
+    console.log(content.imageListPromoAssets[i].block[0].promoImage);
+  } */
 
   return (
     <React.Fragment>
@@ -20,18 +21,18 @@ const ImageList = ({ content }) => {
       <ul className="image-list">
         {content.imageListPromoAssets.map((promo) => (
           <React.Fragment>
-            <li key={promo.block[0].promoTitle || promo.block[0].adventureDetailReference.promoTitle} className="list-item">
+            <li key={promo.block[0].promoTitle || (promo.block[0].adventureDetailReference && promo.block[0].adventureDetailReference.promoTitle)} className="list-item">
               <Link key={promo._path} to={LinkManager(promo)}>
                 <article>
                   <Image
                     src={
-                      promo.block[0].promoImage ||
-                      promo.block[0].adventureDetailReference.promoImage
+                      (promo.block[0] && promo.block[0].promoImage) ||
+                      (promo.block[0].adventureDetailReference && promo.block[0].adventureDetailReference.promoImage) 
                     }
                   />
                   <span className="list-item-title">
                     {promo.block[0].promoTitle ||
-                      promo.block[0].adventureDetailReference.promoTitle}
+                      (promo.block[0].adventureDetailReference && promo.block[0].adventureDetailReference.promoTitle)}
                   </span>
                   <span className="list-item-description">
                     {(promo.block[0].promoDescription &&

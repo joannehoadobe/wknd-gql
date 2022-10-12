@@ -7,13 +7,20 @@ const Image = (props) => {
       { name:"web", width: 1280 }
     ];
 
-  const myImage = props.src._publishUrl || props.src;
+    // CUSTOM - remove
+  const myImage = props.src ? (props.src._publishUrl || props.src) : null;
+    // const myImage = props.src._publishUrl || props.src;
 
   const getSrc = (filename, rendition) => {
     
-    const url = myImage.substr(myImage.lastIndexOf('\\') + 1).split('.');
+    // const url = myImage.substr(myImage.lastIndexOf('\\') + 1).split('.');
+    // CUSTOM
+    const url = myImage ? myImage.substr(myImage.lastIndexOf('\\') + 1).split('.') : '';
     let ext = url.length > 1? url[url.length-1]:"jpeg";
     if(ext === "JPG" || ext === "jpg") ext = "jpeg";
+    // CUSTOM for Blackrock
+    if(ext === "png" && (rendition.width === '1280' || rendition.width > 320)) ext = "jpeg";
+    // end CUSTOM for Blackrock
     return `${myImage}/_jcr_content/renditions/cq5dam.${rendition.name}.${rendition.width}.${rendition.width}.${ext}`;
   };
 
