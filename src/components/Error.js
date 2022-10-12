@@ -19,7 +19,7 @@ export default function ErrorScreen({ error, resetErrorBoundary }) {
         {error === GlobalEndpointError && <a style={styles.a} href="/libs/cq/graphql/sites/admin/content/console.html">Setup Global GraphQL Endpoint</a>}
 
         <pre>{error.message}</pre>
-        <button onClick={resetErrorBoundary}>Try again</button>
+        <button onClick={() => resetErrorBoundary}>Try again</button>
       </div>
     );
   } catch (e) {
