@@ -53,7 +53,7 @@ const AdventureDetail = ({ content }) => {
             <li>
               <button
                 className="adventure-detail-tabs-btn active"
-                onClick={getContent}
+                onClick={() => getContent}
               >
                 Overview
               </button>
