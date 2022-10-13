@@ -5,13 +5,12 @@ import Image from "../image";
 import { LinkManager } from "../../utils";
 import {Link} from "react-router-dom";
 
-
 const Teaser = ({ content }) => {
   return (
     <div className={content.entityType}>
       <div className="floater">
         <div className="inner-content">
-          {content.teaserPreTitle != null && (<div className="pre-title">{content.teaserPreTitle}</div>)}
+          {content.teaserPreTitle != null && (<div className="pre-title">{content.teaserPreTitle}<div className="featured-underline"></div></div>)}
           <h2 className="teaser-title">{content.teaserTitle}</h2>
           
           <div className="teaser-description"
@@ -29,8 +28,9 @@ const Teaser = ({ content }) => {
              
           )}
         </div>
-        </div>
-      <Image className="teaser-image" alt={content.teaserTitle} src={content.teaserImage} />
+        {content.entityType === 'homepage-hero' && <Image className="teaser-image" alt={content.teaserTitle} src={content.teaserImage} />}
+      </div>
+      {content.entityType !== 'homepage-hero' && <Image className="teaser-image" alt={content.teaserTitle} src={content.teaserImage} />}
     </div>
   );
 }
