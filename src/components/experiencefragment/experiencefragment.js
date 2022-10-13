@@ -20,17 +20,22 @@ class ExperienceFragment extends React.Component {
   componentDidMount() {
     var obj = {
       method: "GET",
+      // CUSTOM - but returns opaque result, so commented out
+      // mode: "no-cors",
       headers: {
         "Access-Control-Request-Headers": "Authorization",
         Authorization: "Bearer " + process.env.REACT_APP_TOKEN,
         "Content-Type": "text/plain",
         Origin: "",
       },
-      credentials: "include",
+      credentials: "include",  
     };
 
     let url = this.props.content.experienceFragment._authorUrl;
     url = url.substring(0, url.length - 4);
+    //https://author-p53852-e347001.adobeaemcloud.com/content/experience-fragments/headless2/san-diego-surf/san-diego-surf-spot-v2.content.html?wcmmode=disabled
+    console.log('url in xf = ' + url);
+    // fetch('https://desolate-savannah-18310.herokuapp.com/https://author-p53852-e347001.adobeaemcloud.com/content/experience-fragments/headless2/san-diego-surf/san-diego-surf-spot-v2.content.html?wcmmode=disabled', obj).then((resp)=>{ return resp.json() }).then((text)=>{ console.log('json in static = ' + text) });
     fetch(url + "content.html?wcmmode=disabled", obj).then((res) => {
       res.text().then(
         (response) => {
@@ -62,14 +67,14 @@ class ExperienceFragment extends React.Component {
     } else {
       return (
         <div className="xf-body">
-          <Image src={this.props.content.xfMainImage} />
+          {this.props.content.xfMainImage && <Image src={this.props.content.xfMainImage} />}
           <Breadcrumb />
           <div className="xf-body-content">
             <article
               className="xf-content-body"
               dangerouslySetInnerHTML={{ __html: this.domParser(items) }}
             />
-            <SideRail content={this.props.content} />
+            {/* <SideRail content={this.props.content} /> */}
           </div>
         </div>
       );

@@ -14,7 +14,7 @@
 .xf-body-content {
   display: flex;
   flex-direction: row;
-  margin-left: -15px;
+  /*margin-left: -15px;*/
 }
 
 .xf-body img {
@@ -117,3 +117,298 @@
   width: 40px;
   will-change: transform;
 }
+
+/* CUSTOM for Blackrock */
+
+article.xf-content-body .teaser, article.xf-content-body .teaser-flip-img-right {
+  padding: 56px 0 0 0;
+  padding-bottom: 0!important;
+  overflow: visible;
+  max-width: 1920px!important;
+  width: 100%!important;
+  /*padding-left: 80px!important;
+  padding-right: 80px!important;*/
+  margin: 0 auto;
+}
+
+article.xf-content-body .cmp-teaser {
+  justify-content: flex-end!important;
+  display: flex;
+  vertical-align: middle;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-left: -8px!important;
+  margin-right: -8px!important;
+}
+
+article.xf-content-body .teaser .cmp-teaser {
+  /*justify-content: flex-end!important;
+  display: flex;
+  vertical-align: middle;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-left: -8px!important;
+  margin-right: -8px!important;*/
+  flex-direction: row-reverse;  /* this reverses the image and text */
+}
+
+article.xf-content-body .teaser-flip-img-right .cmp-teaser {
+  flex-direction: row;  /* this reverses the image and text */
+}
+
+article.xf-content-body .cmp-teaser__content {
+  flex: 0 0 41.6666666667%;
+  max-width: 41.6666666667%;
+  padding-right: 8px;
+  padding-left: 8px;
+}
+
+article.xf-content-body .teaser .cmp-teaser__content {
+  margin-left: 8.333%;
+}
+
+article.xf-content-body .cmp-teaser__content h2 {
+  font: 40px/48px FortExtraBold,Arial,sans-serif;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+article.xf-content-body .cmp-teaser__content .cmp-teaser__description {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: FortBook,Arial,sans-serif;
+  margin-bottom: 20px;
+}
+
+article.xf-content-body .cmp-teaser__image {
+  padding-left: 8px;
+  padding-right: 8px;
+  float: left;
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+article.xf-content-body .teaser-flip-img-right .cmp-teaser__image {
+  margin-left: 8.333%;
+}
+
+article.xf-content-body .cmp-teaser__action-container a.cmp-teaser__action-link {
+  font-size: 16px;
+  line-height: 22px;
+  font-family: FortExtraBold,Arial,sans-serif;
+  text-transform: none;
+  color: #000;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  font-weight: bold;
+}
+
+article.xf-content-body .cmp-teaser__action-container a.cmp-teaser__action-link:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ff4713;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+article.xf-content-body .cmp-teaser__action-container a.cmp-teaser__action-link:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* multi-column teaser text only, yellow on homepage */
+.main-body .block .xf-body {
+  width: 100%;
+  max-width: 1920px;
+}
+
+.vi16 {
+  font-family: FortBook,Arial,sans-serif;
+  color: #000;
+  font-size: 14px;
+  line-height: 1em;
+  min-width: 1024px;
+}
+
+.vi16 .blk-bg-yellow {
+  background-color: #ffce00;
+}
+
+.vi16 .multi-column-teaser .wrapper-980 {
+  padding: 56px 0 0 0;
+  max-width: 1920px!important;
+  width: 100%!important;
+  padding-left: 80px!important;
+  padding-right: 80px!important;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.vi16 .row {
+  margin-left: -8px!important;
+  margin-right: -8px!important;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.vi16 .multi-column-teaser.blackrock .col-topic {
+  margin-bottom: 56px;
+  padding-right: 8px;
+  padding-left: 8px;
+  flex: 0 0 33.3333333333%;
+  max-width: 33.3333333333%;
+}
+
+.vi16 .multi-column-teaser.blackrock .multiple-columns-display {
+  display: inline-block;
+}
+
+.vi16 .multi-column-teaser .cols-3 .section-text {
+  padding-right: 38px;
+}
+
+.vi16 .multi-column-teaser .heading {
+  padding-right: 16px;
+  text-align: left;
+}
+
+.vi16 .blackrock.blk-bg-orange .cta.link .label .icon, .vi16 .blackrock.blk-bg-pink .cta.link .label .icon, .vi16 .blackrock.blk-bg-yellow .cta.link .label .icon {
+  color: #000;
+}
+
+.vi16 .multi-column-teaser .heading .label, .vi16 .multi-column-teaser .heading a {
+  font-size: 20px;
+  line-height: 28px;
+  display: inline-block;
+  font-family: FortBold,Arial,sans-serif;
+  color: #000;
+  text-decoration: none;
+}
+
+.vi16 .multi-column-teaser .description, .vi16 .multi-column-teaser .heading, .vi16 .multi-column-teaser .read-more {
+  padding-right: 16px;
+  text-align: left;
+}
+
+.vi16 .multi-column-teaser .heading {
+  margin-top: 20px;
+  /*text-align: center;*/
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+.vi16 .multi-column-teaser .description {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: FortBook,Arial,sans-serif;
+  color: #000;
+  -webkit-flex: 1 0 auto;
+  -moz-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  text-align: center;
+  padding-top: 13px;
+}
+
+.vi16 .multi-column-teaser .description, .vi16 .multi-column-teaser .heading, .vi16 .multi-column-teaser .read-more {
+  padding-right: 16px;
+  text-align: left;
+}
+.vi16 .multi-column-teaser .read-more {
+  /*text-align: center;*/
+  transition: all 150ms ease-out;
+  margin-top: 20px;
+}
+
+.vi16 .blackrock .cta-container-box {
+  display: inline-block;
+}
+
+.vi16 .blackrock .cta.link .label, .vi16 .blackrock a.cta.link {
+  color: #000;
+  text-decoration: none;
+}
+
+.vi16 .cta .label {
+  font-size: 16px;
+  line-height: 22px;
+  font-family: FortExtraBold,Arial,sans-serif;
+  text-transform: none;
+  font-weight: bolder;
+}
+
+.vi16 .blackrock .cta .icon.fa-angle-right {
+  font-size: 16px;
+}
+
+.vi16 .blackrock .cta-container-animation {
+  display: block;
+  width: auto;
+  position: relative;
+}
+
+.vi16 .blackrock.blk-bg-orange .cta.link~.cta-container-animation::after, .vi16 .blackrock.blk-bg-pink .cta.link~.cta-container-animation::after, .vi16 .blackrock.blk-bg-yellow .cta.link~.cta-container-animation::after {
+  background-color: #000;
+}
+
+.vi16 .blackrock .cta.link~.cta-container-animation::after {
+  bottom: -5px;
+}
+
+.vi16 .blackrock .cta-container-animation:after {
+  content: "";
+  width: 0;
+  height: 3px;
+  display: block;
+  transition: width .3s;
+  position: absolute;
+  bottom: 0;
+  background-color: #ff4713;
+}
+
+.vi16 .blackrock a {
+  text-decoration: none;
+}
+
+.vi16 .blackrock a.cta:hover {
+  border-bottom: 2px solid #000;
+  padding-bottom: 3px;
+  width: 100%;
+  transform: scaleX(0);
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+/*
+.fa {
+  -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+.vi16 .blackrock .cta .icon {
+  margin-right: 8px;
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 900;
+  font-size: 14px;
+}
+.vi16 .blackrock .cta .icon.fa-angle-right {
+  font-size: 16px;
+}
+.fa-angle-right:before {
+  content: "\f105";
+}
+*/
