@@ -1,8 +1,18 @@
-const ArticleModel = 'ArticleModel_5';
-const ContributorModel = 'ContributorModel_2';
+const ArticleModel = 'ArticleModel';
+const ContributorModel = 'ContributorModel';
+const {REACT_APP_SITE} = process.env; // CUSTOM add for Blackrock
+const topNavigationPath = '/content/dam/' + REACT_APP_SITE + '/navigation'; // CUSTOM add for Blackrock
 
+// CUSTOM add filter for Blackrock
 export const navigationQuery = `{
-  topList {
+  topList (filter: {
+    _path: {
+      _expressions: {
+        value: "${topNavigationPath}"
+        _operator: STARTS_WITH
+      }
+    }
+    }) {
     items {
       menuItems {
         ... on ScreenModel {
@@ -337,6 +347,7 @@ export function screenQuery(name) {
           }
           ... on ExperienceFragmentModel {
             _model {
+              _path
               title
             }
             xfMainImage {
