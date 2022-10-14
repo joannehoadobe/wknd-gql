@@ -15,19 +15,32 @@
     padding: 10px;
     color:#202020;
     font-size: 14px;
-    text-transform: uppercase;
+    /*text-transform: uppercase; */ /* comment out CUSTOM for Broadridge */
     padding: 15px 17px;
     text-decoration: none;
+    border-top: none;   /* all border stuff - CUSTOM for Broadridge */
+    border-top-width: initial;
+    border-top-style: none;
+    border-top-color: initial;
+    transition: border-bottom .3s ease-in-out .1s;  /* all - CUSTOM for Broadridge */
+    border-bottom: 8px solid #fff;
+    cursor: default;
+    padding: 0 12px 9px;
   }
 
   .menu-wrap > .list-item:hover {
     /*background-color: #ffea00;*/
-    background-color: #ff4713; /* CUSTOM for Blackrock */
+    text-decoration: none;  /* CUSTOM for Broadridge */
+    outline: 0;
+    outline-color: initial;
+    outline-style: initial;
+    outline-width: 0px;
+    border-bottom-color: #003657!important;
   }
 
   .menu-wrap > .list-item:active {
     /*background-color: #ffea00;*/
-    background-color: #ff4713;  /* CUSTOM for Blackrock */
+    background-color: #00578e;  /* CUSTOM for Broadridge */
   }
 
   @media (max-width: 1024px) {
@@ -38,20 +51,21 @@
     }
 
   }
-  /* CUSTOM FOR BLACKROCK */
+  /* CUSTOM FOR BROADRIDGE */
   .main-container .menu-wrap a.list-item {
-    margin: 2px 8px 0 8px;
-    color: #000;
-    font: 16px/24px FortBold,Arial,sans-serif;
-    letter-spacing: 0;
-    padding: 6px 8px;
-    display: flex;
-    white-space: nowrap;
-    margin-bottom: 6px;
-  }
+    background-color: #fff;
+    min-height: 33px;
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: normal;
+    margin: 0;
+    color: #00578e;
+    cursor: default;
+    line-height: inherit;
+    padding-bottom: 0;
+}
   .menu-wrap > .list-item:hover {
-    height: 1px;
-    background: #ff4713;
-    margin-bottom: -4px;
+    color: #003657;
+    text-decoration: underline;
   }
     
