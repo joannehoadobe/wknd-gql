@@ -106,9 +106,9 @@ const Screen = () => {
       <div className="logo">
         <Link to="/">
           <img
-            src="https://www.blackrock.com/blk-corp-assets/cache-1542297736000/images/media-bin/web/global/wordmark/blackrock-logo-nav.svg"//"https://wknd.site/content/experience-fragments/wknd/language-masters/en/site/header/master/_jcr_content/root/container/container_1195249223/image.coreimg.svg/1594412560447/wknd-logo-dk.svg"
+            src="https://d33wubrfki0l68.cloudfront.net/2adf66ba88f79b81994ab70cc57e3bfb67f71c34/5860d/images/br_logo_blue.svg"//"https://wknd.site/content/experience-fragments/wknd/language-masters/en/site/header/master/_jcr_content/root/container/container_1195249223/image.coreimg.svg/1594412560447/wknd-logo-dk.svg"
             alt="logo"
-            width="136"
+            width="180"
           />
         </Link>
       </div>
