@@ -118,7 +118,7 @@
   will-change: transform;
 }
 
-/* CUSTOM for Blackrock */
+/* CUSTOM for Broadridge */
 
 article.xf-content-body .teaser, article.xf-content-body .teaser-flip-img-right {
   padding: 56px 0 0 0;
@@ -143,14 +143,6 @@ article.xf-content-body .cmp-teaser {
 }
 
 article.xf-content-body .teaser .cmp-teaser {
-  /*justify-content: flex-end!important;
-  display: flex;
-  vertical-align: middle;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-left: -8px!important;
-  margin-right: -8px!important;*/
   flex-direction: row-reverse;  /* this reverses the image and text */
 }
 
@@ -170,16 +162,23 @@ article.xf-content-body .teaser .cmp-teaser__content {
 }
 
 article.xf-content-body .cmp-teaser__content h2 {
-  font: 40px/48px FortExtraBold,Arial,sans-serif;
+  font-family: "KievitWeb W05 Exlig",sans-serif;
   margin-bottom: 20px;
-  color: #000000;
+  color: #3C3C3C;
+  letter-spacing: -1.5px;
+  font-size: 48px;
+  line-height: 52px;
+  font-weight: 200;
 }
 
 article.xf-content-body .cmp-teaser__content .cmp-teaser__description {
-  font-size: 16px;
-  line-height: 24px;
-  font-family: FortBook,Arial,sans-serif;
-  margin-bottom: 20px;
+  font-family: "KievitWeb W05 Light",sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+    line-height: 28px;
+    color: #6D6D6D;
+    font-variant-numeric: lining-nums;
+    font-feature-settings: "lnum";
 }
 
 article.xf-content-body .cmp-teaser__image {
@@ -194,29 +193,39 @@ article.xf-content-body .teaser-flip-img-right .cmp-teaser__image {
   margin-left: 8.333%;
 }
 
-article.xf-content-body .cmp-teaser__action-container a.cmp-teaser__action-link {
-  font-size: 16px;
-  line-height: 22px;
-  font-family: FortExtraBold,Arial,sans-serif;
-  text-transform: none;
-  color: #000;
-  text-decoration: none;
-  display: inline-block;
-  position: relative;
-  font-weight: bold;
+article.xf-content-body .cmp-teaser__action-container {
+  margin: 45px 0;
+  flex: 0 1 48%;
+  font-size: 18px;
+    line-height: 28px;
+    color: #6D6D6D;
+    font-family: "KievitWeb W05 Regular",sans-serif;
+    font-weight: normal;
+    font-variant-numeric: lining-nums;
+    font-feature-settings: "lnum";
 }
 
-article.xf-content-body .cmp-teaser__action-container a.cmp-teaser__action-link:after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #ff4713;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
+article.xf-content-body .cmp-teaser__action-container  a.cmp-teaser__action-link {
+  border-width: 2px;
+  cursor: pointer;
+  letter-spacing: .04em;
+  text-transform: none;
+  font-family: 'KievitWeb W05 Bold',sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    background: #007bb6;
+    border-radius: 2px;
+    color: #fff;
+    display: inline-block;
+    padding: 22px 24px;
+    transition: all .3s linear;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+article.xf-content-body .cmp-teaser__action-container a.cmp-teaser__action-link:hover {
+  background-color:#00578e;
 }
 
 article.xf-content-body .cmp-teaser__action-container a.cmp-teaser__action-link:hover:after {
@@ -224,191 +233,86 @@ article.xf-content-body .cmp-teaser__action-container a.cmp-teaser__action-link:
   transform-origin: bottom left;
 }
 
-/* multi-column teaser text only, yellow on homepage */
-.main-body .block .xf-body {
-  width: 100%;
-  max-width: 1920px;
-}
+/* multi-column teaser text only, on homepage */
 
-.vi16 {
-  font-family: FortBook,Arial,sans-serif;
-  color: #000;
-  font-size: 14px;
-  line-height: 1em;
-  min-width: 1024px;
-}
-
-.vi16 .blk-bg-yellow {
-  background-color: #ffce00;
-}
-
-.vi16 .multi-column-teaser .wrapper-980 {
-  padding: 56px 0 0 0;
-  max-width: 1920px!important;
-  width: 100%!important;
-  padding-left: 80px!important;
-  padding-right: 80px!important;
-  overflow: hidden;
-  margin: 0 auto;
-}
-
-.vi16 .row {
-  margin-left: -8px!important;
-  margin-right: -8px!important;
-  display: flex;
+article.xf-content-body .teasermulticol .content-card-list {
+  margin-left: -30px !important;
+  margin-right: -30px !important;
+  justify-content: center !important;
+  flex-direction: row;
   flex-wrap: wrap;
-}
-
-.vi16 .multi-column-teaser.blackrock .col-topic {
-  margin-bottom: 56px;
-  padding-right: 8px;
-  padding-left: 8px;
-  flex: 0 0 33.3333333333%;
-  max-width: 33.3333333333%;
-}
-
-.vi16 .multi-column-teaser.blackrock .multiple-columns-display {
-  display: inline-block;
-}
-
-.vi16 .multi-column-teaser .cols-3 .section-text {
-  padding-right: 38px;
-}
-
-.vi16 .multi-column-teaser .heading {
-  padding-right: 16px;
-  text-align: left;
-}
-
-.vi16 .blackrock.blk-bg-orange .cta.link .label .icon, .vi16 .blackrock.blk-bg-pink .cta.link .label .icon, .vi16 .blackrock.blk-bg-yellow .cta.link .label .icon {
-  color: #000;
-}
-
-.vi16 .multi-column-teaser .heading .label, .vi16 .multi-column-teaser .heading a {
-  font-size: 20px;
+  display: flex;
+  font-size: 18px;
   line-height: 28px;
-  display: inline-block;
-  font-family: FortBold,Arial,sans-serif;
-  color: #000;
-  text-decoration: none;
+  align-items: normal; /* really custom for Broadridge */
 }
 
-.vi16 .multi-column-teaser .description, .vi16 .multi-column-teaser .heading, .vi16 .multi-column-teaser .read-more {
-  padding-right: 16px;
-  text-align: left;
+.content-card-list .content-card {
+  margin: 30px!important;
+    width: calc(33.33% - 60px);
+    transition: background-color .3s ease-in-out;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    color: #3c3c3c;
+    display: flex!important;
+    flex-direction: column!important;
+    min-height: 340px!important;
+    font-size: 18px;
+    line-height: 18px;
+    text-decoration: none;
 }
 
-.vi16 .multi-column-teaser .heading {
-  margin-top: 20px;
-  /*text-align: center;*/
-  text-transform: uppercase;
-  font-weight: bolder;
+.content-card-list .content-card__image {
+  margin: 0;
+    max-height: 345px;
+    overflow: hidden;
 }
 
-.vi16 .multi-column-teaser .description {
-  font-size: 16px;
-  line-height: 24px;
-  font-family: FortBook,Arial,sans-serif;
-  color: #000;
-  -webkit-flex: 1 0 auto;
-  -moz-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  text-align: center;
-  padding-top: 13px;
-}
-
-.vi16 .multi-column-teaser .description, .vi16 .multi-column-teaser .heading, .vi16 .multi-column-teaser .read-more {
-  padding-right: 16px;
-  text-align: left;
-}
-.vi16 .multi-column-teaser .read-more {
-  /*text-align: center;*/
-  transition: all 150ms ease-out;
-  margin-top: 20px;
-}
-
-.vi16 .blackrock .cta-container-box {
-  display: inline-block;
-}
-
-.vi16 .blackrock .cta.link .label, .vi16 .blackrock a.cta.link {
-  color: #000;
-  text-decoration: none;
-}
-
-.vi16 .cta .label {
-  font-size: 16px;
-  line-height: 22px;
-  font-family: FortExtraBold,Arial,sans-serif;
-  text-transform: none;
-  font-weight: bolder;
-}
-
-.vi16 .blackrock .cta .icon.fa-angle-right {
-  font-size: 16px;
-}
-
-.vi16 .blackrock .cta-container-animation {
+figure {
   display: block;
-  width: auto;
-  position: relative;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 40px;
+  margin-inline-end: 40px;
 }
 
-.vi16 .blackrock.blk-bg-orange .cta.link~.cta-container-animation::after, .vi16 .blackrock.blk-bg-pink .cta.link~.cta-container-animation::after, .vi16 .blackrock.blk-bg-yellow .cta.link~.cta-container-animation::after {
-  background-color: #000;
-}
-
-.vi16 .blackrock .cta.link~.cta-container-animation::after {
-  bottom: -5px;
-}
-
-.vi16 .blackrock .cta-container-animation:after {
-  content: "";
-  width: 0;
-  height: 3px;
-  display: block;
-  transition: width .3s;
-  position: absolute;
-  bottom: 0;
-  background-color: #ff4713;
-}
-
-.vi16 .blackrock a {
-  text-decoration: none;
-}
-
-.vi16 .blackrock a.cta:hover {
-  border-bottom: 2px solid #000;
-  padding-bottom: 3px;
+.content-card__image img {
   width: 100%;
-  transform: scaleX(0);
-  height: 3px;
-  bottom: 0;
-  left: 0;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
+  max-width: 100%;
+    height: auto;
+    vertical-align: middle;
 }
 
-/*
-.fa {
-  -webkit-font-smoothing: antialiased;
-    display: inline-block;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    line-height: 1;
+.content-card-list .content-card__content {
+  padding: 20px 35px;
+  font-size: 18px;
+    line-height: 18px;
 }
-.vi16 .blackrock .cta .icon {
-  margin-right: 8px;
-  font-family: "Font Awesome 5 Pro";
-  font-weight: 900;
-  font-size: 14px;
+
+.content-card-list .content-card__title {
+  font-size: 24px;
+    line-height: 1.33;
+    margin: 0 0 10px;
+    /*color: #3c3c3c;*/
+    letter-spacing: 0;
+    transition: color .3s ease-in-out;
+    font-family: 'KievitWeb W05 Light',sans-serif;
+    font-weight: 300;
 }
-.vi16 .blackrock .cta .icon.fa-angle-right {
-  font-size: 16px;
+
+.content-card-list .content-card__copy {
+  font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: normal;
+    margin: 0 0 40px;
+    /*color: #5c5c5c;*/
+    transition: color .3s ease-in-out;
+    font-family: 'KievitWeb W05 Light',sans-serif;
+    font-weight: 300;
 }
-.fa-angle-right:before {
-  content: "\f105";
+
+.content-card-list a.content-card:hover {
+  background-color: #003657;
+  color: #fff;
+  text-decoration: none;
 }
-*/
